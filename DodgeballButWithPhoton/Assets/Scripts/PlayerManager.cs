@@ -12,6 +12,8 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
     public MouseLook _camera;
     public int playersOutOnTeam1 = 0;
     public int playersOutOnTeam2 = 0;
+    //public AudioClip ballHit;
+    public AudioSource ballHitSource;
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -150,6 +152,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
     {
        // Debug.Log(gameObject.name + " was hit by ");
         //TODO: MOVE THE GAME OBJECT TO OUT AREA
+        ballHitSource.Play();
         amIOut = true;
         //print(this.gameObject.name + " in playerManager ImOut");
         rpcSendScript.SendTeamOutUpdate("SendTeamOut", this.team, this.gameObject.name, true);
