@@ -29,6 +29,8 @@ public class ThrowBall : MonoBehaviourPun
     public ThrowBall throwBall;
     public bool isViewMine = false;
     public PlayerManager pm;
+    
+    [SerializeField] private Animator playerAnimator;
     public void Start()
     {
         /*ballHolding = PhotonNetwork.Instantiate("DodgeballHeld", holdingPosition.position, holdingPosition.rotation);
@@ -81,6 +83,9 @@ public class ThrowBall : MonoBehaviourPun
                     GameObject ballSpawn = PhotonNetwork.Instantiate("Dodgeball", ballSpawnPoint.position, Quaternion.identity);
                     ballSpawn.GetComponent<Rigidbody>().AddForce(direction.normalized * throwForce, ForceMode.Impulse);
                     ballSpawn.GetComponent<Rigidbody>().AddForce(cam.transform.up * upwardForce, ForceMode.Impulse);
+                    
+                    playerAnimator.SetBool("PlayerThrow", true);
+                    
                     pickedUpBall = false;
                     //ballHolding.SetActive(false);
                 }
@@ -92,6 +97,7 @@ public class ThrowBall : MonoBehaviourPun
                     Vector3 direction = targetPoint - ballSpawnPoint.position;
                     GameObject ballSpawn = PhotonNetwork.Instantiate("Wrench", ballSpawnPoint.position, Quaternion.identity);
                     ballSpawn.GetComponent<Rigidbody>().AddForce(direction.normalized * throwForce, ForceMode.Impulse);
+                    playerAnimator.SetBool("PlayerThrow", true);
                     pickedUpWrench = false;
                     //wrenchHolding.SetActive(false);
                 }

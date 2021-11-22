@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Dodgeball.unity
     guid: dc0cfb2919c64e04595de9753cac1b24
   - enabled: 1
-    path: Assets/Scenes/WinSceneRichards.unity
-    guid: 194285f7f5ed27c4bb988100fdac0f43
-  - enabled: 1
     path: Assets/Scenes/WinSceneBananaSlugs.unity
     guid: f708445e3eb0ae24e9211f02b9ff55cb
+  - enabled: 1
+    path: Assets/Scenes/WinSceneRichards.unity
+    guid: 78f8b581fe983be43a4deee904133674
   m_configObjects: {}

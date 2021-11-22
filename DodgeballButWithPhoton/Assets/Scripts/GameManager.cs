@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     public double time = 61.26;
     public double currentTime;
     public bool introVideoPlayed = false;
-    //public VideoClip bananaSlugsWinClip;
-    //public VideoClip richardsWinClip;
+    public VideoClip bananaSlugsWinClip;
+    public VideoClip richardsWinClip;
+    private double winClipLength = 17.5;
     private void Start()
     {
         instance = this;
@@ -61,14 +62,14 @@ public class GameManager : MonoBehaviourPunCallbacks
             currentTime = videoPlayer.GetComponent<VideoPlayer> ().time;
             if (PhotonNetwork.CurrentRoom != null)playersInRoom = PhotonNetwork.CurrentRoom.PlayerCount;
             //changed for testing
-            if (playersInRoom == 2)
+            if (playersInRoom == 4)
             {
                 Player[] membersOnTeam1;
                 Player[] membersOnTeam2;
                 PhotonTeamsManager.Instance.TryGetTeamMembers(1, out membersOnTeam1);
                 PhotonTeamsManager.Instance.TryGetTeamMembers(2, out membersOnTeam2);
 
-                if (membersOnTeam2.Length == 1 && membersOnTeam1.Length == 1 && introVideoPlayed == false)
+                if (membersOnTeam2.Length == 2 && membersOnTeam1.Length == 2 && introVideoPlayed == false)
                 {
                     PlayIntroVideo();
                     //StartFromTeamSelect();
@@ -79,27 +80,37 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         if(curScene == "Dodgeball")
         {
-            if (playersOutTeam1 == 2)
+            if (playersOutTeam2 == 2)
             {
                 //Banana Slugs Win
                 //player.GetComponent<VideoPlayer>().clip = bananaSlugsWinClip;
                 //player.GetComponent<VideoPlayer>().Play();
-                //SceneManager.LoadScene("WinSceneBananaSlugs");
+                SceneManager.LoadScene("WinSceneBananaSlugs");
             }
-            if (playersOutTeam2 == 2)
+            if (playersOutTeam1 == 2)
             {
                 //Richards Win
                 //player.GetComponent<VideoPlayer>().clip = richardsWinClip;
                 //player.GetComponent<VideoPlayer>().Play();
-                //SceneManager.LoadScene("WinSceneRichards");
+                SceneManager.LoadScene("WinSceneRichards");
             }
+        }
+
+        if (curScene == "WinSceneBananaSlugs")
+        {
+            Destroy(PlayerManager.localPlayerInstance);
+            StartCoroutine(SwitchFinalScene());
+        }
+        if (curScene == "WinSceneRichards")
+        {
+            Destroy(PlayerManager.localPlayerInstance);
+            StartCoroutine(SwitchFinalScene());
         }
 
         if(curScene == "SampleScene")
         {
             Destroy(PlayerManager.localPlayerInstance);
         }
-        
         //currentTime = gameObject.GetComponent<VideoPlayer> ().time;
     }
     public void PlayIntroVideo()
@@ -108,6 +119,13 @@ public class GameManager : MonoBehaviourPunCallbacks
         introVideoPlayed = true;
         //videoPlayer.GetComponent<VideoPlayer>().
     }
+
+    IEnumerator SwitchFinalScene()
+    {
+        yield return new WaitForSeconds(18);
+        SceneManager.LoadScene("SampleScene");
+    }
+    
     public void StartFromTeamSelect()
     {
         SceneManager.LoadScene("Dodgeball");

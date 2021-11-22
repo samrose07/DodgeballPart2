@@ -3,27 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="91bee8f0-6107-4f06-aae9-9bde9f644f68" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DodgeballButWithPhoton/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DodgeballButWithPhoton/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterModelExp.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterModelExp.mtl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterModelExp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterModelExp.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DodgeballArenaExp.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DodgeballArenaExp.mtl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DodgeballArenaExp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DodgeballArenaExp.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Dodgeball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Dodgeball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PlayerAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PlayerAnimatorController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ThirdPersonController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ThirdPersonController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Wrench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Wrench.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WrenchHeld.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/WrenchHeld.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WrenchPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/WrenchPickup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dodgeball.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dodgeball.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TeamSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TeamSelect.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WinSceneBananaSlugs.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WinSceneBananaSlugs.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WinSceneRichards.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WinSceneRichards.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WinSceneRichards.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WinSceneRichards.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ThrowBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ThrowBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +88,7 @@
       <workItem from="1637171453766" duration="754000" />
       <workItem from="1637172350405" duration="2616000" />
       <workItem from="1637521968042" duration="10589000" />
+      <workItem from="1637539951051" duration="4241000" />
     </task>
     <servers />
   </component>
@@ -119,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
